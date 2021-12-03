@@ -1,0 +1,25 @@
+.main_layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--primary-color-text);
+    padding: 1rem;
+    p {
+        margin: 0;
+    }
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: var(--primary-color-text);
+    padding: 1rem;
+}
+
+.main {
+    flex: 1;
+}
