@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   urlApi: 'https://qaweb.pj.gob.pe/personal-judicial-api',
   codigoCliente: 'PJ',
-  codigoAplicativo: 'SIGRH'
+  codigoAplicativo: 'SIGRH',
+  version: '1.0'
 };
 
 /*

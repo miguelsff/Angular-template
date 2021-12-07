@@ -1,1 +1,23 @@
-<p>login-page-auth works!</p>
+<div class="box_frmlogin">
+  <p-card>
+    <form class="frmlogin" #frmlogin="ngForm" (ngSubmit)="iniciarSesion(frmlogin)">
+      <div class="p-field">
+        <label for="username">Usuario</label>
+        <span class="p-input-icon-left">
+          <i class="pi pi-user"></i>
+          <input id="username" type="username" aria-describedby="username-help" pInputText />
+        </span>
+        <!--<small id="username-help" class="p-error">Debes escribir el usuario.</small>-->
+      </div>
+      <div class="p-field">
+        <label for="password">Contraseña</label>
+        <span class="p-input-icon-left">
+          <i class="pi pi-lock"></i><input id="password" type="password" aria-describedby="password-help"
+            pInputText />
+        </span>
+        <!--<small id="password-help" class="p-error">Debes escribir la contraseña.</small>-->
+      </div>
+      <button pButton type="submit" label="Iniciar sesión"></button>
+    </form>
+  </p-card>
+</div>

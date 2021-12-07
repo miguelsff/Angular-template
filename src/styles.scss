@@ -1,12 +1,47 @@
 :root {
-    --primary-color: #8b0000 ;
-    --primary-color-text: #fff;
-    --secondary-color: #455d69;
-    --secondary-color-text: #fff;
+  --primary-color: #8b0000;
+  --primary-color-text: #fff;
+  --secondary-color: #455d69;
+  --secondary-color-text: #fff;
+  --secondary-color-light: #5d7c8b;
+  --primary-color-light: #9b0303;
+}
+
+html {
+  font-size: 14px;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: var(--font-family);
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+  background: var(--gray-200);
+}
+
+.p-button {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  width: 100%;
+
+  &:enabled:hover {
+    background: var(--primary-color-light);
+    border-color: var(--primary-color-light);
+    opacity: 0.8;
+  }
+}
+
+.p-inputtext {
+  width: 100%;
+}
+
+.p-field {
+  margin-bottom: 1rem;
+
+  & label {
+    margin-bottom: 0.3rem;
+  }
+
+  & * {
+    display: block;
+  }
 }

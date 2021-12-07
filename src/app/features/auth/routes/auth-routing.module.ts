@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '', component: MainLayoutComponent,
     children: [
       { path: 'login', component: LoginPageAuthComponent },
-      { path: '**', redirectTo: '/auth/login', pathMatch: 'full' }
+      { path: '', redirectTo: '/auth/login', pathMatch: 'full' }
     ]
   }
 ];

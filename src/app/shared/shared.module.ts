@@ -5,6 +5,8 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 import { RouterModule } from '@angular/router';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
+import { MenubarModule } from 'primeng/menubar';
+
 @NgModule({
   declarations: [
     MainLayoutComponent,
@@ -12,7 +14,8 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MenubarModule
   ]
 })
 export class SharedModule { }
