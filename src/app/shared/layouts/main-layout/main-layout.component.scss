@@ -36,8 +36,7 @@
   .p-menubar {
     background: var(--secondary-color);
     border-radius: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
   }
 
   .p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-link .p-menuitem-text {
@@ -71,7 +70,8 @@
   }
 
   .p-menubar-button {
-    padding: 1rem !important;
+    width: 3rem !important;
+    height: 3rem !important;
   }
 
 }
