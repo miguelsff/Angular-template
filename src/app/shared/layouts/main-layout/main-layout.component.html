@@ -1,16 +1,21 @@
 <div class="main_layout">
   <header class="header">
     <div class="header__top">
+      <a href="https://www.pj.gob.pe/pj" title="Poder Judicial del Perú" target="_blank">
+        <img src="assets/imgs/logo-pj-v2.png" alt="Poder Judicial del Perú - Logo" class="header__top__logo" />
+      </a>
       <h1 class="header__title_app">App name</h1>
     </div>
     <div class="menu_bar">
       <p-menubar [model]="items">
       </p-menubar>
     </div>
-    
+
   </header>
   <main class="main">
-    <router-outlet></router-outlet>
+    <div class="main_inner">
+      <router-outlet></router-outlet>
+    </div>
   </main>
   <footer class="footer">
     <p>Paseo de la República S/N Palacio de Justicia, Cercado, Lima - Perú</p>

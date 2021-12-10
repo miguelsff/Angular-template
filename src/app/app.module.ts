@@ -12,7 +12,6 @@ import { AdminModule } from './features/admin/admin.module';
 import { PublicModule } from './features/public/public.module';
 import { AuthModule } from './features/auth/auth.module';
 import { CoreModule } from './core/core.module';
-import { SharedModule } from './shared/shared.module';
 
 import { environment } from '../environments/environment';
 
@@ -32,7 +31,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AdminModule,
     AppRoutingModule,
     CoreModule,
-    SharedModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
