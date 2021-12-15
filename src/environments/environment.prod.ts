@@ -4,5 +4,7 @@ export const environment = {
   codigoCliente: 'PJ',
   codigoAplicativo: 'SIGRH',
   version: '1.0',
-  idGoogleAnalitics: ''
+  idGoogleAnalitics: 'G-YNR0ZQL0P0',
+  googleApiKey: 'AIzaSyDUtCeh1hIyKbROF7OMuWZSL5CTp-sBCRM',
+  googleClientId: '491185625511-u10i6vqra9ak9dfac3ls6i867u0pk9l5.apps.googleusercontent.com'
 };
