@@ -11,37 +11,30 @@ export class GoogleApiCustomService {
   private apiKey: String = environment.googleApiKey;
   private clientId: String = environment.googleClientId;
   private discoveryDocs: Array<String> = ["https://people.googleapis.com/$discovery/rest?version=v1"];
-  private scopes: String = 'profile';
+  private scope: String = 'profile';
 
   constructor() { }
 
   handleClientLoad() {
     // Load the API client and auth2 library
     gapi.load('client:auth2', this.initClient);
+    
   }
 
   initClient() {
-    let $this = this;
+
+    let $this = new GoogleApiCustomService();
     gapi.client.init({
-      apiKey: this.apiKey,
-      discoveryDocs: this.discoveryDocs,
-      clientId: this.clientId,
-      scope: this.scopes
+      apiKey: $this.apiKey,
+      discoveryDocs: $this.discoveryDocs,
+      clientId: $this.clientId,
+      scope: $this.scope
     }).then(function () {
       // Listen for sign-in state changes.
       gapi.auth2.getAuthInstance().isSignedIn.listen($this.updateSigninStatus);
       // Handle the initial sign-in state.
       $this.updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
     });
-  }
-
-  updateSigninStatus(isSignedIn: any) {
-    if (isSignedIn) {
-      console.log('LOGEADO');
-      this.makeApiCall();
-    } else {
-      console.log('NO LOGEADO');
-    }
   }
 
   handleAuthClick() {
@@ -52,6 +45,15 @@ export class GoogleApiCustomService {
     gapi.auth2.getAuthInstance().signOut();
   }
 
+  updateSigninStatus(isSignedIn: any) {
+    if (isSignedIn) {
+      console.log('LOGEADO');
+      this.makeApiCall();
+    } else {
+      console.log('NO LOGEADO');
+    }
+  }
+  
   makeApiCall() {
     gapi.client.people.people.get({
       'resourceName': 'people/me',
@@ -62,3 +64,4 @@ export class GoogleApiCustomService {
   }
 
 }
+
