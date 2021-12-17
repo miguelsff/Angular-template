@@ -37,12 +37,19 @@ export class MainLayoutComponent implements OnInit {
         routerLinkActiveOptions: { exact: true },
       },
       {
-        label: 'Cerrar sesión',
-        icon: 'pi pi-fw pi-sign-out',
-        command: (event) => {
-          //this.tokenService.signOut();
-          this.router.navigate(['/auth/login']);
-        }
+        label: 'Bienvenido, Miguel',
+        style: { 'margin-left': 'auto' },
+        styleClass: 'auth-menu-item',
+        items: [
+          {
+            label: 'Cerrar sesión',
+            icon: 'pi pi-fw pi-sign-out',
+            command: (event) => {
+              //this.tokenService.signOut();
+              this.router.navigate(['/auth/login']);
+            }
+          }
+        ]
       }
     ]
   }

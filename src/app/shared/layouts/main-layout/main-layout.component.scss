@@ -12,7 +12,7 @@
 }
 
 .header__top__logo {
-  height: 50px;
+  height: 40px;
 }
 
 .header__title_app {
@@ -49,6 +49,7 @@
     background: var(--secondary-color);
     border-radius: 0;
     padding: 0;
+    display: block !important;
   }
 
   .p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-link .p-menuitem-text {
@@ -63,6 +64,9 @@
     color: var(--secondary-color-text);
   }
 
+  .p-menubar .p-menuitem-link:not(.p-disabled):hover,
+  .p-menubar .p-menuitem.p-menuitem-active > .p-menuitem-link:hover,
+  .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link, .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover,
   .p-menubar .p-menubar-button:hover,
   .p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-link:not(.p-disabled):hover {
     background: var(--secondary-color-light);
@@ -72,6 +76,8 @@
     border-radius: 0;
   }
 
+  .p-menubar .p-menuitem.p-menuitem-active > .p-menuitem-link,
+  .p-menubar .p-submenu-list,
   .p-menubar .p-menubar-root-list {
     background: var(--secondary-color);
   }
@@ -84,5 +90,20 @@
   .p-menubar-button {
     width: 3rem !important;
     height: 3rem !important;
+  }
+
+  .p-menubar .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text,
+  .p-menubar .p-menuitem-link .p-menuitem-text,
+  .p-menubar .p-menuitem.p-menuitem-active > .p-menuitem-link .p-menuitem-text,
+  .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link .p-menuitem-text, .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text,
+  .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link .p-submenu-icon, .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover .p-submenu-icon,
+  .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover .p-submenu-icon,
+  .p-menubar .p-menuitem-link .p-submenu-icon,
+  .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-submenu-icon {
+    color: var(--primary-color-text);
+  }
+
+  .p-menubar .auth-menu-item .p-submenu-list {
+    right: 0;
   }
 }

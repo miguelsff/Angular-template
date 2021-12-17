@@ -10,11 +10,20 @@
 
 .container_iframe {
   position: relative;
-  padding-top: 57%;
+  padding-top: 58%;
+}
+
+.hide_footer_iframe {
+  height: 25px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 @media only screen and (max-width: 960px) {
   .container_iframe {
-    padding-top: 252%;
+    padding-top: 253%;
   }
 }
