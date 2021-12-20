@@ -14,6 +14,7 @@ import { AuthModule } from './features/auth/auth.module';
 import { CoreModule } from './core/core.module';
 
 import { environment } from '../environments/environment';
+import { StoreModule } from '@ngrx/store';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -44,7 +45,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]

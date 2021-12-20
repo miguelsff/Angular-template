@@ -31,12 +31,6 @@ export class MainLayoutComponent implements OnInit {
         routerLinkActiveOptions: { exact: true },
       },
       {
-        label: 'Auth',
-        icon: 'pi pi-fw pi-search',
-        routerLink: ['/auth'],
-        routerLinkActiveOptions: { exact: true },
-      },
-      {
         label: 'Bienvenido, Miguel',
         style: { 'margin-left': 'auto' },
         styleClass: 'auth-menu-item',

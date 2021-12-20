@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
+
 import { environment } from '../../../environments/environment'
 
 @Injectable({
@@ -13,7 +16,7 @@ export class GoogleApiCustomService {
 
   private googleAuth!: gapi.auth2.GoogleAuth;
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   handleClientLoad() {
     let $this = this;
@@ -42,20 +45,24 @@ export class GoogleApiCustomService {
   updateSigninStatus(isSignedIn: any) {
     if (isSignedIn) {
       console.log('LOGEADO');
-      console.log(this.googleAuth.currentUser.get())
-      this.makeApiCall();
+      console.log(this.googleAuth.currentUser.get());
     } else {
       console.log('NO LOGEADO');
     }
   }
 
-  makeApiCall() {
-    /*gapi.client.people.people.get({
-      'resourceName': 'people/me',
-      'requestMask.includeField': 'person.names'
-    }).then(function (resp: any) {
-      console.log(resp)
-    });*/
+  getAssetsDataStudio() {
+    return this.httpClient.get(`https://datastudio.googleapis.com/v1/assets:search`, {
+    }).pipe(
+      map((result: any) => result)
+    );
+  }
+
+  getPermissionsDataStudio() {
+    return this.httpClient.get(`https://datastudio.googleapis.com/v1/assets/{ASSET_ID}/permissions`, {
+    }).pipe(
+      map((result: any) => result)
+    );
   }
 
 }
