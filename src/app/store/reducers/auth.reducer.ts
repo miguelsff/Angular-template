@@ -2,15 +2,9 @@ import { Action, createReducer, on } from '@ngrx/store';
 import { User } from 'src/app/models/user.model';
 import * as authAction from '../actions/auth.action';
 
-let authStateInitial: User = {
-    id: null,
-    name: null,
-    fullname: null,
-    email: null,
-    auth: null
-}
+let initialState = new User();
 
-const _login = createReducer(authStateInitial,
+const _login = createReducer(initialState,
     on(authAction.loginRequest, state => ({
         ...state
     })),
