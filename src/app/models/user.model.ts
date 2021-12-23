@@ -1,9 +1,9 @@
 import { Auth } from "./auth.model";
 
 export interface User {
-    id: string,
-    name: string,
-    fullname: string,
-    email: string,
-    auth: Auth
+    id: string | null,
+    name: string | null,
+    fullname: string | null,
+    email: string | null,
+    auth: Auth | null
 }
