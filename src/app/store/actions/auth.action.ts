@@ -8,7 +8,7 @@ export const loginError = createAction('[Auth] Login error', props<{ error: Erro
 export const logout = createAction('[Auth] Logout');
 
 export const getAuthUserRequest = createAction('[Auth] Auth user request');
-export const getAuthUserSuccess = createAction('[Auth] Auth user sucess', props<{ user: User }>());
+export const getAuthUserSuccess = createAction('[Auth] Auth user success', props<{ user: User }>());
 export const getAuthUserError = createAction('[Auth] Auth user error', props<{ error: Error }>());
 
 export const refreshTokenRequest = createAction('[Auth] Refresh token request');
