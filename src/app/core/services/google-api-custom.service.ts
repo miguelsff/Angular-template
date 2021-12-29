@@ -42,7 +42,7 @@ export class GoogleApiCustomService {
     this.googleAuth.signOut();
   }
 
-  updateSigninStatus(isSignedIn: any) {
+  updateSigninStatus(isSignedIn: boolean) {
     if (isSignedIn) {
       console.log('LOGEADO');
       console.log(this.googleAuth.currentUser.get());
